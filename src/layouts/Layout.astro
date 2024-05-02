@@ -1,0 +1,100 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-green-400">
+
+   
+		<div>		
+<nav class="container w-4/5 mx-auto justify-between flex h-16 items-center rounded-lg bg-green-200	">
+		<div class="ml-3" >
+			<a href="" class="w-full "><span class="font-semibold text-green-800">G.</span><span>Student</span></a>
+		</div>
+
+		<menu>
+			<ul class="flex justify-between w-full space-x-3 ">
+				<li class="bg-slate-400 p-2 rounded-lg">Mis juegos</li>
+				<li class="bg-slate-400 p-2 rounded-lg">Deportes</li>
+				<li class="bg-slate-400 p-2 rounded-lg">Entretenimiento</li>
+				<li class="bg-slate-400 p-2 rounded-lg">contact</li>
+				
+			</ul>
+
+		</menu>
+		<div class="mr-3">
+			<a href="">logo</a>
+		</div>
+</nav>
+
+ <div class=" w-4/5 mx-auto mt-6 rounded-lg ">
+
+	 <div class=" grid grid-cols-3  space-x-5">
+
+
+		<div class="bg-green-300">
+		<div class="mx-auto h-40 w-40 bg-[url(https://cdn.pixabay.com/photo/2013/07/13/12/38/dices-160005_640.png)] bg-[length:100%_100%]">
+ 		</div>
+		<a href="#"><p class="bg-blue-500 text-center mx-4/5 p-3">jugar</p></a>
+		</div>
+
+		<div class="bg-green-300">
+			<div class="mx-auto h-40 w-40 bg-[url(https://cdn.pixabay.com/photo/2013/07/13/12/38/dices-160005_640.png)] bg-[length:100%_100%]">
+		</div>
+	   <a href="#"><p class="bg-blue-500 text-center mx-4/5 p-3">jugar</p></a></div>
+
+		
+	   <div class="bg-green-300">
+		<div class="mx-auto h-40 w-40 bg-[url(https://cdn.pixabay.com/photo/2013/07/13/12/38/dices-160005_640.png)] bg-[length:100%_100%]">
+		</div>
+	   <a href="#"><p class="bg-blue-500 text-center mx-4/5 p-3">jugar</p></a></div>
+	 </div>
+
+ </div>
+
+
+ <div class=" w-4/5 mx-auto mt-6 rounded-lg ">
+
+	<div class=" grid grid-cols-3  space-x-5">
+
+
+	   <div class="bg-green-300">
+	   <div class="mx-auto h-40 w-40 bg-[url(https://cdn.pixabay.com/photo/2013/07/13/12/38/dices-160005_640.png)] bg-[length:100%_100%]">
+		</div>
+	   <a href="#"><p class="bg-blue-500 text-center mx-4/5 p-3">jugar</p></a>
+	   </div>
+
+	   <div class="bg-green-300">
+		   <div class="mx-auto h-40 w-40 bg-[url(https://cdn.pixabay.com/photo/2013/07/13/12/38/dices-160005_640.png)] bg-[length:100%_100%]">
+	   </div>
+	  <a href="#"><p class="bg-blue-500 text-center mx-4/5 p-3">jugar</p></a></div>
+
+	   
+	  <div class="bg-white">
+	   <div class="mx-auto h-40 w-40 bg-[url(https://tse4.mm.bing.net/th?id=OIP.rSdrzor52Oc70XBMQLPk_wAAAA&pid=Api&P=0&h=180)] bg-[length:100%_100%]">
+	   </div>
+	  <a href="#"><p class="bg-blue-500 text-center mx-4/5 p-3 ">jugar</p></a></div>
+	</div>
+
+</div>
+</div>
+
+
+		<slot />
+
+	</body>
+</html>
+
