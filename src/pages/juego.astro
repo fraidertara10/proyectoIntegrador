@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Operaciones Básicas con Frutas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-8">
+        <h1 class="text-3xl font-bold mb-4">Juego de Operaciones Básicas con Frutas</h1>
+        <div id="question" class="text-2xl mb-4"></div>
+        <input type="number" id="answer" class="border border-gray-300 p-2 rounded-lg mb-4 w-1/4">
+        <button id="submitBtn" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Enviar</button>
+        <div id="result" class="text-xl mt-4"></div>
+        <div id="score" class="text-lg mt-4"></div>
+    </div>
+
+    <script>
+        // Array de frutas para utilizar en las preguntas
+        const fruits = ["manzanas", "plátanos", "naranjas", "uvas", "sandías", "piñas"];
+
+        let correctAnswers = 0;
+        let totalQuestions = 0;
+        let answer; // Variable para almacenar la respuesta actual
+        let operator; // Variable para almacenar el operador actual
+
+        // Función para generar una pregunta aleatoria
+        function generateQuestion() {
+            totalQuestions++;
+            const num1 = Math.floor(Math.random() * 10) + 1; // Número aleatorio entre 1 y 10
+            const num2 = Math.floor(Math.random() * 10) + 1; // Número aleatorio entre 1 y 10
+            const fruit = fruits[Math.floor(Math.random() * fruits.length)]; // Fruta aleatoria
+            operator = ['+', '-', '*', '/'][Math.floor(Math.random() * 4)]; // Operador aleatorio
+
+            let question;
+            switch (operator) {
+                case '+':
+                    answer = num1 + num2;
+                    question = `Si tienes ${num1} ${fruit} y agregas ${num2}, ¿cuántas tienes en total?`;
+                    break;
+                case '-':
+                    answer = num1 - num2;
+                    question = `Si tienes ${num1} ${fruit} y le quitas ${num2}, ¿cuántas te quedan?`;
+                    break;
+                case '*':
+                    answer = num1 * num2;
+                    question = `Si tienes ${num1} grupos de ${num2} ${fruit} cada uno, ¿cuántas tienes en total?`;
+                    break;
+                case '/':
+                    answer = num1;
+                    num1 = num1 * num2;
+                    question = `Si tienes ${num1} ${fruit} y los divides en ${num2} grupos iguales, ¿cuántas hay en cada grupo?`;
+                    break;
+                default:
+                    break;
+            }
+            return question;
+        }
+
+        // Función para evaluar la respuesta
+        function evaluateAnswer(correctAnswer, userAnswer) {
+            const tolerance = 0.0001; // Tolerancia para comparación de números de punto flotante
+            if (Math.abs(parseFloat(userAnswer) - correctAnswer) < tolerance) {
+                correctAnswers++;
+                return "¡Correcto!";
+            } else {
+                return "¡Incorrecto! Inténtalo de nuevo.";
+            }
+        }
+
+        // Función para actualizar la puntuación
+        function updateScore() {
+            const score = (correctAnswers / totalQuestions) * 5.0;
+            document.getElementById("score").textContent = `Tu puntuación: ${score.toFixed(2)}/5.0`;
+        }
+
+        // Generar la primera pregunta cuando se carga la página
+        document.getElementById("question").textContent = generateQuestion();
+
+        // Manejar el evento de clic en el botón de enviar
+        document.getElementById("submitBtn").addEventListener("click", function() {
+            const userAnswer = document.getElementById("answer").value;
+            const result = evaluateAnswer(answer, userAnswer);
+            document.getElementById("result").textContent = result;
+            updateScore();
+
+            // Generar una nueva pregunta después de 2 segundos
+            setTimeout(function() {
+                document.getElementById("question").textContent = generateQuestion(); // Generar nueva pregunta
+                document.getElementById("answer").value = ""; // Limpiar campo de respuesta
+                document.getElementById("result").textContent = ""; // Limpiar resultado
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
