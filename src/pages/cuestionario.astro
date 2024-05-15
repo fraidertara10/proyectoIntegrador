@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuestionario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 p-8">
+    <div class="container mx-auto p-4 bg-white rounded-lg shadow-md">
+      <h1 class="text-2xl font-bold mb-4">Cuestionario</h1>
+      <form id="quizForm">
+        <!-- Matemáticas Básicas -->
+        <div>
+          <h2 class="text-xl font-semibold mb-2">Matemáticas Básicas</h2>
+          <div class="mb-4">
+            <label class="block text-gray-700">1. ¿Cuánto es 2 + 2?</label>
+            <input type="number" class="w-full p-2 border rounded" name="math1" />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700">2. ¿Cuál es la raíz cuadrada de 16?</label>
+            <input type="number" class="w-full p-2 border rounded" name="math2" />
+          </div>
+        </div>
+
+        <!-- Literatura -->
+        <div>
+          <h2 class="text-xl font-semibold mb-2">Literatura</h2>
+          <div class="mb-4">
+            <label class="block text-gray-700">1. ¿Quién escribió 'Cien años de soledad'?</label>
+            <input type="text" class="w-full p-2 border rounded" name="lit1" />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700">2. ¿Cuál es el título de la obra más famosa de William Shakespeare?</label>
+            <input type="text" class="w-full p-2 border rounded" name="lit2" />
+          </div>
+        </div>
+
+        <!-- Nombres de Animales -->
+        <div>
+          <h2 class="text-xl font-semibold mb-2">Nombres de Animales</h2>
+          <div class="mb-4">
+            <label class="block text-gray-700">1. Nombra un mamífero que vive en el océano.</label>
+            <input type="text" class="w-full p-2 border rounded" name="animal1" />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700">2. ¿Cuál es el ave que no puede volar?</label>
+            <input type="text" class="w-full p-2 border rounded" name="animal2" />
+          </div>
+        </div>
+
+        <!-- Cultura General -->
+        <div>
+          <h2 class="text-xl font-semibold mb-2">Cultura General</h2>
+          <div class="mb-4">
+            <label class="block text-gray-700">1. ¿Cuál es la capital de Francia?</label>
+            <input type="text" class="w-full p-2 border rounded" name="culture1" />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700">2. ¿En qué año llegó el hombre a la luna?</label>
+            <input type="number" class="w-full p-2 border rounded" name="culture2" />
+          </div>
+        </div>
+
+        <button type="button" onclick="submitQuiz()" class="mt-4 bg-blue-500 text-white p-2 rounded">Enviar</button>
+      </form>
+
+      <div id="results" class="hidden mt-4 p-4 bg-green-100 rounded">
+        <h2 class="text-xl font-semibold mb-2">Resultados</h2>
+        <p id="resultsText" class="text-gray-700"></p>
+      </div>
+    </div>
+
+    <script>
+      function submitQuiz() {
+        const form = document.getElementById('quizForm');
+        const formData = new FormData(form);
+        const results = document.getElementById('results');
+        const resultsText = document.getElementById('resultsText');
+
+        const answers = {
+          math1: '4',
+          math2: '4',
+          lit1: 'Gabriel Garcia Marquez',
+          lit2: 'Hamlet',
+          animal1: 'delfin',
+          animal2: 'pinguino',
+          culture1: 'Paris',
+          culture2: '1969'
+        };
+
+        let correctCount = 0;
+        let totalQuestions = 8;
+
+        for (let [key, value] of formData.entries()) {
+          if (value.toString().toLowerCase() === answers[key].toLowerCase()) {
+            correctCount++;
+          }
+        }
+
+        let score = (correctCount / totalQuestions) * 4 + 1;
+        score = score.toFixed(2);
+
+        let output = `Respuestas correctas: ${correctCount} de ${totalQuestions}\n`;
+        output += `Tu nota es: ${score} de 5.0`;
+
+        resultsText.textContent = output;
+        results.classList.remove('hidden');
+      }
+    </script>
+  </body>
+</html>
