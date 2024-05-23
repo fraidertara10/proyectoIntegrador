@@ -29,9 +29,9 @@
         // Función para generar una pregunta aleatoria
         function generateQuestion() {
             totalQuestions++;
-            const num1 = Math.floor(Math.random() * 10) + 1; // Número aleatorio entre 1 y 10
-            const num2 = Math.floor(Math.random() * 10) + 1; // Número aleatorio entre 1 y 10
-            const fruit = fruits[Math.floor(Math.random() * fruits.length)]; // Fruta aleatoria
+            let num1 = Math.floor(Math.random() * 10) + 1; // Número aleatorio entre 1 y 10
+            let num2 = Math.floor(Math.random() * 10) + 1; // Número aleatorio entre 1 y 10
+            let fruit = fruits[Math.floor(Math.random() * fruits.length)]; // Fruta aleatoria
             operator = ['+', '-', '*', '/'][Math.floor(Math.random() * 4)]; // Operador aleatorio
 
             let question;

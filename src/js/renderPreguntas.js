@@ -88,7 +88,7 @@ export class RenderPreguntasyRespuestas {
     const template = /* html */`
           <div class= "text-center text-xl flex flex-col gap-3 border-b p-1 border-black">
               <p>Pregunta ${this.indicePreguntaActual + 1}</p>
-              <p class= "text-xl break-all">${pregunta.pregunta}</p>
+              <p class= "text-base break-all font-medium text-center ">${pregunta.pregunta}</p>
           </div>
           <section class="flex flex-col gap-2 text-xl">
                   ${respuestasHtml}
