@@ -13,6 +13,7 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<style>
@@ -53,91 +54,203 @@ const { title } = Astro.props;
 					margin-bottom: 5px;
 				}
 			}
-		</style>
-	</head>
-	<body class="bg-white">
-		<div>
-			<nav class="container w-3/5 mx-auto justify-between flex h-16 items-center rounded-lg bg-blue-200">
-				<div class="ml-3">
-					<a href="" class="flex items-center space-x-1">
-						<span class="text-blue-800 font-semibold text-lg">G.</span>
-						<span class="text-lg">Student</span>
-					</a>
-				</div>
-				<menu class="menu">
-					<ul class="flex justify-between space-x-3">
-						<li>
-							<a href="" class="bg-blue-500 hover:bg-blue-600 p-2 rounded-lg transition-colors duration-300">Mis juegos</a>
-						</li>
-						<li>
-							<a href="#" class="bg-blue-500 hover:bg-blue-600 p-2 rounded-lg transition-colors duration-300">Deportes</a>
-						</li>
-						<li>
-							<a href="#" class="bg-blue-500 hover:bg-blue-600 p-2 rounded-lg transition-colors duration-300">Entretenimiento</a>
-						</li>
-						<li>
-							<a href="#" class="bg-blue-500 hover:bg-blue-600 p-2 rounded-lg transition-colors duration-300">Contacto</a>
-						</li>
-					</ul>
-				</menu>
-
-
-
-
-				<div class="mr-3">
-					<a href="" class="text-blue-800 text-lg font-semibold">Logo</a>
-				</div>
-			</nav>
-
-
-
-			<div class="w-3/5 mx-auto mt-6 rounded-lg">
-				<div class="grid grid-cols-2 gap-6">
-					<div class=" bg-blue-200 rounded-lg p-4 flex flex-col items-center justify-center transition duration-300 transform hover:scale-105">
-						<div class="w-40 h-40 overflow-hidden bg bg-[url(https://png.pngtree.com/png-clipart/20230824/original/pngtree-cartoon-jungle-animals-animal-wild-picture-image_8443958.png)] bg-[length:100%_100%]"></div>
-						<a href="/src/pages/juego_dos.astro" class="mt-4 py-2 px-4 bg-blue-500 text-white rounded-lg text-center w-full transition duration-300 hover:bg-blue-600">Jugar</a>
-					</div>
-					<div class="bg-blue-200 rounded-lg p-4 flex flex-col items-center justify-center transition duration-300 transform hover:scale-105">
-						<div class="w-40 h-40 overflow-hidden bg bg-[url(https://cdn.pixabay.com/photo/2020/08/18/12/50/books-5498156_1280.png)] bg-[length:100%_100%]"></div>
-						<a href="#" class="mt-4 py-2 px-4 bg-blue-500 text-white rounded-lg text-center w-full transition duration-300 hover:bg-blue-600">Jugar</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="w-3/5  mx-auto mt-6 rounded-lg">
-				<div class="grid grid-cols-2 gap-6">
-					<div class="bg-blue-200 rounded-lg p-4 flex flex-col items-center justify-center transition duration-300 transform hover:scale-105">
-						<div class="w-40 h-40 overflow-hidden bg bg-[url(https://eventos.uis.edu.co/simposio-matematicas/wp-content/uploads/2023/09/ilustracion-07.png)] bg-[length:100%_100%]"></div>
-						<a href="/src/pages/cienciasSociales.astro" class="mt-4 py-2 px-4 bg-blue-500 text-white rounded-lg text-center w-full transition duration-300 hover:bg-blue-600">Jugar</a>
-					</div>
-					<div class="bg-blue-200 rounded-lg p-4 flex flex-col items-center justify-center transition duration-300 transform hover:scale-105">
-						<div class="w-40 h-40 overflow-hidden bg bg-[url(https://m.media-amazon.com/images/I/51zLDUMXEUL.png)] bg-[length:100%_100%]"></div>
-						<a href="#" class="mt-4 py-2 px-4 bg-blue-500 text-white rounded-lg text-center w-full transition duration-300 hover:bg-blue-600">Jugar</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
 
 		
-		<div class="w-3/5  mx-auto mt-6 rounded-lg">
-			<div class="grid grid-cols-2 gap-6">
-				<div class="bg-blue-200 rounded-lg p-4 flex flex-col items-center justify-center transition duration-300 transform hover:scale-105">
-					<div class="w-40 h-40 overflow-hidden bg bg-[url(https://eventos.uis.edu.co/simposio-matematicas/wp-content/uploads/2023/09/ilustracion-07.png)] bg-[length:100%_100%]"></div>
-					<a href="/src/pages/etica.astro" class="mt-4 py-2 px-4 bg-blue-500 text-white rounded-lg text-center w-full transition duration-300 hover:bg-blue-600">Jugar</a>
+   
+    
+
+
+		</style>
+	</head>
+	<body class="bg-gray-100 font-sans">
+		<div class="bg-purple-500 p-4 mx-auto rounded">
+			<div class="container mx-auto flex justify-between items-center">
+				<div class="w-10 h-10 overflow-hidden">
+					<img
+						class="max-w-full h-auto"
+						src="../img/icono.webp"
+						alt=""
+					/>
 				</div>
-				<div class="bg-blue-200 rounded-lg p-4 flex flex-col items-center justify-center transition duration-300 transform hover:scale-105">
-					<div class="w-40 h-40 overflow-hidden bg bg-[url(https://m.media-amazon.com/images/I/51zLDUMXEUL.png)] bg-[length:100%_100%]"></div>
-					<a href="#" class="mt-4 py-2 px-4 bg-blue-500 text-white rounded-lg text-center w-full transition duration-300 hover:bg-blue-600">Jugar</a>
+
+				<div class="w-30 flex justify-between items-center">
+					<div
+						class="transition duration-300 transform hover:scale-105 hover:text-gray-100"
+					>
+						<a
+							href="/src/pages/iniciosesion.astro"
+							class="text-white">Iniciar sesión</a
+						>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-		<div class=" w-full justify-center flex">
-			<button class="mt-10 py-2 px-4 bg-blue-500 text-white rounded-lg text-center w-1/5 transition duration-300 hover:bg-blue-600"><a href="/src/pages/Cuestionario.astro">  terminar y generar la autoevaulacion</a></button>
+		<div class="container mx-auto p-4 text-center mb-20">
+			<h1 class="text-4xl max-w-60 mx-auto font-bold mb-4  font-mono border-b-2 border-black">
+				¡Bienvenido!
+			</h1>
+			<div class="my-10 relative">
+				<div id="slider" class="max-w-xl mx-auto bg-purple-500 p-2 rounded overflow-hidden relative">
+					<h1 class="font-bold font-mono uppercase text-xl text-white">Como empezar</h1>
+					<ul id="slideList" class="bg-white p-3 rounded">
+						<li id="slide" class="slide-in-left">1- No tienes cuenta? Registrate <a class="border-b-2 border-black" href="/src/pages/registro.astro">aqui!</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<!-- Sección de Juegos -->
+
+			<div class="grid grid-cols-2 gap-4">
+				
+				<div class="p-4 bg-white hover:bg-purple-300 rounded shadow-md hover:scale-105 transition-transform duration-700">
+					<h2 class="text-2xl font-bold mb-2 font-mono">
+						Adivina el animal
+					</h2>
+					<img
+						src="../img/animal.webp"
+						alt="Icono de Juegos"
+						class="w-24 h-24 mx-auto mb-4"
+					/>
+					<p class="">
+						¡Adivina el nombre del animal y gana!
+					</p>
+					<a
+						href="/src/pages/juego_dos.astro"
+						class="mt-2 max-w-32 mx-auto font-semibold   bg-purple-500 rounded block text-white hover:bg-purple-700"
+						>Jugar</a
+					>
+				</div>
+
+				
+				<div class="p-4 bg-white hover:bg-purple-300 rounded shadow-md hover:scale-105 transition-transform duration-700">
+					<h2 class="text-2xl font-bold mb-2 font-mono">
+						Matematicas
+					</h2>
+					<img
+						src="../img/matematicas.png"
+						alt="Icono de Juegos"
+						class="w-24 h-24 mx-auto mb-4"
+					/>
+					<p class="">
+						¡Resuelve las operaciones y gana!
+					</p>
+					<a
+						href="/src/pages/juego.astro"
+						class="mt-2 max-w-32 mx-auto font-semibold   bg-purple-500 rounded block text-white hover:bg-purple-700"
+						>Jugar</a
+					>
+				</div>
+
+
+				<div class="p-4 bg-white hover:bg-purple-300 rounded shadow-md hover:scale-105 transition-transform duration-700">
+					<h2 class="text-2xl font-bold mb-2 font-mono">
+						Ciencias Naturales
+					</h2>
+					<img
+						src="../img/cienciasNaturales.png"
+						alt="Icono de Juegos"
+						class="w-24 h-24 mx-auto mb-4"
+					/>
+					<p class="">
+						¿Cuanto sabes sobre la naturaleza?
+					</p>
+					<a
+						href="/src/pages/cienciasNaturales.astro"
+						class="mt-2 max-w-32 mx-auto font-semibold   bg-purple-500 rounded block text-white hover:bg-purple-700"
+						>Jugar</a
+					>
+				</div>
+
+				<div class="p-4 bg-white hover:bg-purple-300 rounded shadow-md hover:scale-105 transition-transform duration-700">
+					<h2 class="text-2xl font-bold mb-2 font-mono">
+						Ciencias Sociales
+					</h2>
+					<img
+						src="../img/sociales.png"
+						alt="Icono de Juegos"
+						class="w-24 h-24 mx-auto mb-4"
+					/>
+					<p class="">
+						¿Que sabes de la sociedad?
+					</p>
+					<a
+						href="/src/pages/cienciasSociales.astro"
+						class="mt-2 max-w-32 mx-auto font-semibold   bg-purple-500 rounded block text-white hover:bg-purple-700"
+						>Jugar</a
+					>
+				</div>
+
+				<div class="p-4 bg-white hover:bg-purple-300 rounded shadow-md hover:scale-105 transition-transform duration-700">
+					<h2 class="text-2xl font-bold mb-2 font-mono">
+						Español
+					</h2>
+					<img
+						src="../img/castellano.png"
+						alt="Icono de Juegos"
+						class="w-24 h-24 mx-auto mb-4"
+					/>
+					<p class="">
+						¡Que sabes de literatura!
+					</p>
+					<a
+						href="/src/pages/lenguaCastellana.astro"
+						class="mt-2 max-w-32 mx-auto font-semibold   bg-purple-500 rounded block text-white hover:bg-purple-700"
+						>Jugar</a
+					>
+				</div>
+
+				<div class="p-4 bg-white hover:bg-purple-300 rounded shadow-md hover:scale-105 transition-transform duration-700">
+					<h2 class="text-2xl font-bold mb-2 font-mono">
+						Etica
+					</h2>
+					<img
+						src="../img/etica.png"
+						alt="Icono de Juegos"
+						class="w-24 h-24 mx-auto mb-4"
+					/>
+					<p class="">
+						¿Sabes de valores humanos?
+					</p>
+					<a
+						href="/src/pages/etica.astro"
+						class="mt-2 max-w-32 mx-auto font-semibold   bg-purple-500 rounded block text-white hover:bg-purple-700"
+						>Jugar</a
+					>
+				</div>
+
+			</div>
 		</div>
+		<div class="w-full justify-center flex">
+			<button
+				class="mt-2 py-2 px-4 bg-purple-500 text-white rounded-lg text-center w-1/5 transition duration-300 hover:bg-blue-600"
+				><a href="/src/pages/Cuestionario.astro">
+					terminar y generar la autoevaulacion</a
+				></button
+			>
+		</div>
+		<div class="h-40">a</div>
 
 		<slot />
+
+	
+
+		<script>
+			const slide = document.getElementById('slide');
+			const messages = [
+				"1- No tienes cuenta? Registrate <a class='border-b-2 border-black' href='/src/pages/registro.astro'>aqui!</a>",
+				"2- Si ya estas registrado, puedes hacer uso de todas nuestras funcionalidades ;)",
+				"3- Al final podrás encontrar un sistema de autoevaluación"
+			];
+			let index = 0;
+		
+			function showNextMessage() {
+				index = (index + 1) % messages.length;
+				slide.innerHTML = messages[index];
+			}
+		
+			// Cambiar los mensajes automáticamente después de cierto tiempo
+			setInterval(showNextMessage, 2000); // Cambiar cada 2 segundos
+		</script>
 	</body>
 </html>
