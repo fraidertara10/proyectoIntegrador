@@ -16,36 +16,43 @@
     </style>
 </head>
 <body class="bg-blue-300">
-    <a href="http://localhost:4321/">volver </a>
-    <div class="container mx-auto mt-20 text-center bg-blue-200 w-1/5 rounded-lg ">
-        <h1 class="text-3xl font-bold mb-4 h-10 py-5">¿ Que animal es ?</h1>
-        <div class="mx-auto w-[20%_20%]">
+    
+    <div class="container mx-auto mt-20 text-center bg-blue-200 md:w-2/5 lg:w-1/3 xl:w-1/4 rounded-lg p-4">
+        <h1 class="text-3xl font-bold mb-4 h-10 py-5">¿Qué animal es?</h1>
+        <div class="mx-auto max-w-xs md:max-w-md lg:max-w-lg xl:max-w-xl mb-4">
             <img
                 id="animalImage"
                 src=""
                 alt="Animal"
-                class="mb-4 w-[100%_100%] small-image mx-auto"
+                class="mb-4 w-full h-auto mx-auto rounded-lg"
             />
         </div>
-
+    
         <input
             type="text"
             id="animalName"
-            class="border border-gray-300 p-2 rounded-lg mb-4"
+            class="border border-gray-300 p-2 rounded-lg mb-4 w-full"
             placeholder="Escribe el nombre del animal"
         />
         <button
             id="submitBtn"
-            class="bg-blue-500 text-white px-4 py-2 rounded-lg mb-5 transition duration-300 transform hover:scale-105"
-            >Enviar</button>
-            
+            class="bg-blue-500 text-white px-4 py-2 rounded-lg mb-2 md:mb-4 transition duration-300 transform hover:scale-105 w-full md:w-auto"
+        >Enviar</button>
+                
         <button
             id="terminar"
-            class="bg-blue-500 text-white px-4 py-2 rounded-lg mb-5 transition duration-300 transform hover:scale-105"
-            >terminar juego</button>
-
+            class="bg-blue-500 text-white px-4 py-2 rounded-lg mb-2 md:mb-4 transition duration-300 transform hover:scale-105 w-full md:w-auto"
+        >Terminar juego</button>
+    
         <div id="result" class="text-xl mt-4"></div>
     </div>
+    
+    <div class="w-full flex justify-center">
+        <a href="http://localhost:4321/" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+            Volver
+        </a>
+    </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
