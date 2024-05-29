@@ -1,6 +1,6 @@
 export const btnSiguiente = document.getElementById('btn-siguiente')
 export const cantMaximaPreguntas = 5
-export const preguntas = [
+export const preguntasCuestionario = [
   {
     pregunta: '¿Qué parte de la planta absorbe agua y nutrientes del suelo?',
     respuestas: [
@@ -2015,3 +2015,5 @@ export const preguntasLenguaCastellana = [
     ],
   },
 ];
+
+ 
