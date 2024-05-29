@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cuestionario</title>
@@ -12,62 +12,115 @@
     </style>
   </head>
   <body class="bg-gray-100 p-8">
-    <div class="container mx-auto p-4 bg-white rounded-lg shadow-md">
-      <h1 class="text-2xl font-bold mb-4">Cuestionario</h1>
-      <form id="quizForm">
-        <!-- Matemáticas Básicas -->
-        <div>
-          <h2 class="text-xl font-semibold mb-2">Matemáticas Básicas</h2>
-          <div class="mb-4">
-            <label class="block text-gray-700">1. ¿Cuánto es 2 + 2?</label>
-            <input type="number" class="w-full p-2 border rounded" name="math1" />
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-700">2. ¿Cuál es la raíz cuadrada de 16?</label>
-            <input type="number" class="w-full p-2 border rounded" name="math2" />
+    <div class=" mx-auto p-4 bg-white rounded-lg shadow-md">
+      <h1 class="text-2xl font-bold mb-4 text-indigo-600 text-center">Cuestionario</h1>
+      <form id="quizForm" class="space-y-4">
+        <!-- Matemáticas -->
+        <div class="space-y-2">
+          <h2 class="text-xl font-semibold text-gray-800">Matemáticas</h2>
+          <div class="flex flex-col md:flex-row md:space-x-4">
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">1. ¿Cuánto es 5 x 3?</label>
+              <input type="number" class="w-full p-2 border rounded" name="math1" />
+            </div>
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">2. ¿Cuánto es 12 ÷ 4?</label>
+              <input type="number" class="w-full p-2 border rounded" name="math2" />
+            </div>
           </div>
         </div>
 
-        <!-- Literatura -->
-        <div>
-          <h2 class="text-xl font-semibold mb-2">Literatura</h2>
-          <div class="mb-4">
-            <label class="block text-gray-700">1. ¿Quién escribió 'Cien años de soledad'?</label>
-            <input type="text" class="w-full p-2 border rounded" name="lit1" />
+        <!-- Ciencias Sociales -->
+        <div class="space-y-2">
+          <h2 class="text-xl font-semibold text-gray-800">Ciencias Sociales</h2>
+          <div class="flex flex-col md:flex-row md:space-x-4">
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">1. ¿Cuál es el propósito de los derechos humanos en una sociedad?</label>
+              <input type="text" class="w-full p-2 border rounded" name="sociales1" />
+            </div>
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">2. ¿Qué es la anarquía?</label>
+              <input type="text" class="w-full p-2 border rounded" name="sociales2" />
+            </div>
           </div>
-          <div class="mb-4">
-            <label class="block text-gray-700">2. ¿Cuál es el título de la obra más famosa de William Shakespeare?</label>
-            <input type="text" class="w-full p-2 border rounded" name="lit2" />
+        </div>
+
+        <!-- Ciencias Naturales -->
+        <div class="space-y-2">
+          <h2 class="text-xl font-semibold text-gray-800">Ciencias Naturales</h2>
+          <div class="flex flex-col md:flex-row md:space-x-4">
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">1. ¿Qué gas necesitan las plantas para realizar la fotosíntesis?</label>
+              <input type="text" class="w-full p-2 border rounded" name="naturales1" />
+            </div>
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">2. ¿Qué es la clorofila?</label>
+              <input type="text" class="w-full p-2 border rounded" name="naturales2" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Ética -->
+        <div class="space-y-2">
+          <h2 class="text-xl font-semibold text-gray-800">Ética</h2>
+          <div class="flex flex-col md:flex-row md:space-x-4">
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">1. ¿Por qué es importante el valor de la responsabilidad en la toma de decisiones?</label>
+              <input type="text" class="w-full p-2 border rounded" name="etica1" />
+            </div>
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">2. ¿Cómo se manifiesta el valor del respeto en la toma de decisiones éticas?</label>
+              <input type="text" class="w-full p-2 border rounded" name="etica2" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Lengua Castellana -->
+        <div class="space-y-2">
+          <h2 class="text-xl font-semibold text-gray-800">Lengua Castellana</h2>
+          <div class="flex flex-col md:flex-row md:space-x-4">
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">1. ¿Qué es una metáfora en la escritura?</label>
+              <input type="text" class="w-full p-2 border rounded" name="lengua1" />
+            </div>
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">2. ¿Qué es la ironía en un texto literario?</label>
+              <input type="text" class="w-full p-2 border rounded" name="lengua2" />
+            </div>
           </div>
         </div>
 
         <!-- Nombres de Animales -->
-        <div>
-          <h2 class="text-xl font-semibold mb-2">Nombres de Animales</h2>
-          <div class="mb-4">
-            <label class="block text-gray-700">1. Nombra un mamífero que vive en el océano.</label>
-            <input type="text" class="w-full p-2 border rounded" name="animal1" />
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-700">2. ¿Cuál es el ave que no puede volar?</label>
-            <input type="text" class="w-full p-2 border rounded" name="animal2" />
+        <div class="space-y-2">
+          <h2 class="text-xl font-semibold text-gray-800">Nombres de Animales</h2>
+          <div class="flex flex-col md:flex-row md:space-x-4">
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">1. ¿Cómo se llama el mamífero más grande del mundo?</label>
+              <input type="text" class="w-full p-2 border rounded" name="animal1" />
+            </div>
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">2. ¿Cuál es el animal más rápido del mundo?</label>
+              <input type="text" class="w-full p-2 border rounded" name="animal2" />
+            </div>
           </div>
         </div>
 
         <!-- Cultura General -->
-        <div>
-          <h2 class="text-xl font-semibold mb-2">Cultura General</h2>
-          <div class="mb-4">
-            <label class="block text-gray-700">1. ¿Cuál es la capital de Francia?</label>
-            <input type="text" class="w-full p-2 border rounded" name="culture1" />
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-700">2. ¿En qué año llegó el hombre a la luna?</label>
-            <input type="number" class="w-full p-2 border rounded" name="culture2" />
+        <div class="space-y-2">
+          <h2 class="text-xl font-semibold text-gray-800">Cultura General</h2>
+          <div class="flex flex-col md:flex-row md:space-x-4">
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">1. ¿Cuál es la capital de Japón?</label>
+              <input type="text" class="w-full p-2 border rounded" name="culture1" />
+            </div>
+            <div class="flex-grow mb-4">
+              <label class="block text-gray-700">2. ¿Quién pintó la Mona Lisa?</label>
+              <input type="text" class="w-full p-2 border rounded" name="culture2" />
+            </div>
           </div>
         </div>
 
-        <button type="button" onclick="submitQuiz()" class="mt-4 bg-blue-500 text-white p-2 rounded">Enviar</button>
+        <button type="button" onclick="submitQuiz()" class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 mx-auto">Enviar</button>
       </form>
 
       <div id="results" class="hidden mt-4 p-4 bg-green-100 rounded">
@@ -89,18 +142,24 @@
         const resultsText = document.getElementById('resultsText');
 
         const answers = {
-          math1: '4',
-          math2: '4',
-          lit1: 'Gabriel Garcia Marquez',
-          lit2: 'Hamlet',
-          animal1: 'delfin',
-          animal2: 'pinguino',
-          culture1: 'Paris',
-          culture2: '1969'
+          math1: '15',
+          math2: '3',
+          sociales1: 'Proteger los derechos básicos y la dignidad de todas las personas.',
+          sociales2: 'Ausencia de un gobierno central.',
+          naturales1: 'Dióxido de carbono',
+          naturales2: 'Pigmento verde en las hojas de las plantas.',
+          etica1: 'Implica asumir las consecuencias de las propias acciones.',
+          etica2: 'Considerando las perspectivas y derechos de los demás.',
+          lengua1: 'Una comparación directa entre dos elementos.',
+          lengua2: 'Una contradicción entre lo que se dice y lo que se quiere expresar.',
+          animal1: 'La ballena azul.',
+          animal2: 'El guepardo.',
+          culture1: 'Tokio',
+          culture2: 'Leonardo da Vinci'
         };
 
         let correctCount = 0;
-        let totalQuestions = 8;
+        let totalQuestions = 14;
 
         for (let [key, value] of formData.entries()) {
           if (value.toString().toLowerCase() === answers[key].toLowerCase()) {
@@ -108,7 +167,7 @@
           }
         }
 
-        let score = (correctCount / totalQuestions) * 4 + 1;
+        let score = (correctCount / totalQuestions) * 5;
         score = score.toFixed(2);
 
         let output = `Respuestas correctas: ${correctCount} de ${totalQuestions}\n`;
