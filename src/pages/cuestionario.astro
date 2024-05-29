@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cuestionario</title>
+    <title>Evaulacion</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       .hidden {
@@ -11,21 +11,21 @@
       }
     </style>
   </head>
-  <body class="bg-gray-100 p-8">
-    <div class=" mx-auto p-4 bg-white rounded-lg shadow-md">
-      <h1 class="text-2xl font-bold mb-4 text-indigo-600 text-center">Cuestionario</h1>
-      <form id="quizForm" class="space-y-4">
+  <body class=" p-8">
+    <div class="p-10 bg-blue-100 rounded-lg shadow-md">
+      <h1 class="text-2xl font-bold mb-4 text-indigo-600 text-center">Evaulacion de conocimientos</h1>
+      <form id="quizForm" class="space-y-4 bg-blue-200 mx-auto">
         <!-- Matemáticas -->
-        <div class="space-y-2">
-          <h2 class="text-xl font-semibold text-gray-800">Matemáticas</h2>
-          <div class="flex flex-col md:flex-row md:space-x-4">
+        <div class="space-y-2 mx-auto">
+          <h2 class="text-xl font-semibold text-gray-800 text-center">Matemáticas</h2>
+          <div class="items-center">
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">1. ¿Cuánto es 5 x 3?</label>
-              <input type="number" class="w-full p-2 border rounded" name="math1" />
+              <input type="number" class="p-2 border rounded w-[50%] mx-auto" name="math1" />
             </div>
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">2. ¿Cuánto es 12 ÷ 4?</label>
-              <input type="number" class="w-full p-2 border rounded" name="math2" />
+              <input type="number" class="w-[50%] p-2 border rounded" name="math2" />
             </div>
           </div>
         </div>
@@ -33,14 +33,14 @@
         <!-- Ciencias Sociales -->
         <div class="space-y-2">
           <h2 class="text-xl font-semibold text-gray-800">Ciencias Sociales</h2>
-          <div class="flex flex-col md:flex-row md:space-x-4">
+          <div class="">
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">1. ¿Cuál es el propósito de los derechos humanos en una sociedad?</label>
-              <input type="text" class="w-full p-2 border rounded" name="sociales1" />
+              <input type="text" class="w-[50%] p-2 border rounded" name="sociales1" />
             </div>
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">2. ¿Qué es la anarquía?</label>
-              <input type="text" class="w-full p-2 border rounded" name="sociales2" />
+              <input type="text" class="w-[50%] p-2 border rounded" name="sociales2" />
             </div>
           </div>
         </div>
@@ -48,14 +48,14 @@
         <!-- Ciencias Naturales -->
         <div class="space-y-2">
           <h2 class="text-xl font-semibold text-gray-800">Ciencias Naturales</h2>
-          <div class="flex flex-col md:flex-row md:space-x-4">
+          <div class="">
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">1. ¿Qué gas necesitan las plantas para realizar la fotosíntesis?</label>
-              <input type="text" class="w-full p-2 border rounded" name="naturales1" />
+              <input type="text" class="w-[50%] p-2 border rounded" name="naturales1" />
             </div>
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">2. ¿Qué es la clorofila?</label>
-              <input type="text" class="w-full p-2 border rounded" name="naturales2" />
+              <input type="text" class="w-[50%] p-2 border rounded" name="naturales2" />
             </div>
           </div>
         </div>
@@ -63,14 +63,14 @@
         <!-- Ética -->
         <div class="space-y-2">
           <h2 class="text-xl font-semibold text-gray-800">Ética</h2>
-          <div class="flex flex-col md:flex-row md:space-x-4">
+          <div class="">
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">1. ¿Por qué es importante el valor de la responsabilidad en la toma de decisiones?</label>
-              <input type="text" class="w-full p-2 border rounded" name="etica1" />
+              <input type="text" class="w-[50%] p-2 border rounded" name="etica1" />
             </div>
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">2. ¿Cómo se manifiesta el valor del respeto en la toma de decisiones éticas?</label>
-              <input type="text" class="w-full p-2 border rounded" name="etica2" />
+              <input type="text" class="w-[50%] p-2 border rounded" name="etica2" />
             </div>
           </div>
         </div>
@@ -78,14 +78,14 @@
         <!-- Lengua Castellana -->
         <div class="space-y-2">
           <h2 class="text-xl font-semibold text-gray-800">Lengua Castellana</h2>
-          <div class="flex flex-col md:flex-row md:space-x-4">
+          <div class="">
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">1. ¿Qué es una metáfora en la escritura?</label>
-              <input type="text" class="w-full p-2 border rounded" name="lengua1" />
+              <input type="text" class="w-[50%] p-2 border rounded" name="lengua1" />
             </div>
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">2. ¿Qué es la ironía en un texto literario?</label>
-              <input type="text" class="w-full p-2 border rounded" name="lengua2" />
+              <input type="text" class="w-[50%] p-2 border rounded" name="lengua2" />
             </div>
           </div>
         </div>
@@ -93,14 +93,14 @@
         <!-- Nombres de Animales -->
         <div class="space-y-2">
           <h2 class="text-xl font-semibold text-gray-800">Nombres de Animales</h2>
-          <div class="flex flex-col md:flex-row md:space-x-4">
+          <div class="">
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">1. ¿Cómo se llama el mamífero más grande del mundo?</label>
-              <input type="text" class="w-full p-2 border rounded" name="animal1" />
+              <input type="text" class="w-[50%] p-2 border rounded" name="animal1" />
             </div>
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">2. ¿Cuál es el animal más rápido del mundo?</label>
-              <input type="text" class="w-full p-2 border rounded" name="animal2" />
+              <input type="text" class="w-[50%] p-2 border rounded" name="animal2" />
             </div>
           </div>
         </div>
@@ -108,14 +108,14 @@
         <!-- Cultura General -->
         <div class="space-y-2">
           <h2 class="text-xl font-semibold text-gray-800">Cultura General</h2>
-          <div class="flex flex-col md:flex-row md:space-x-4">
+          <div class="">
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">1. ¿Cuál es la capital de Japón?</label>
-              <input type="text" class="w-full p-2 border rounded" name="culture1" />
+              <input type="text" class="w-[50%] p-2 border rounded" name="culture1" />
             </div>
             <div class="flex-grow mb-4">
               <label class="block text-gray-700">2. ¿Quién pintó la Mona Lisa?</label>
-              <input type="text" class="w-full p-2 border rounded" name="culture2" />
+              <input type="text" class="w-[50%] p-2 border rounded" name="culture2" />
             </div>
           </div>
         </div>
