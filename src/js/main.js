@@ -1,7 +1,7 @@
-import { btnSiguiente, preguntas } from './constants.js'
+import { btnSiguiente, pregunta} from './constants.js'
 import { RenderPreguntasyRespuestas } from './renderPreguntas.js'
 
-const renderPreguntas = new RenderPreguntasyRespuestas(preguntas)
+const renderPreguntas = new RenderPreguntasyRespuestas(pregunta)
 
 renderPreguntas.renderPreguntas()
 

@@ -5,6 +5,8 @@ const renderPreguntas = new RenderPreguntasyRespuestas(preguntasCuestionario)
 
 renderPreguntas.renderPreguntas()
 
+
+
 btnSiguiente.addEventListener('click', () => {
   if (renderPreguntas.todasPreguntasResueltas) {
     renderPreguntas.indicePreguntaActual++
@@ -17,6 +19,7 @@ btnSiguiente.addEventListener('click', () => {
     renderPreguntas.renderPreguntas()
     return
   }
+
 
   Swal.fire({
     title: '¿Desea continuar?',
@@ -33,4 +36,5 @@ btnSiguiente.addEventListener('click', () => {
       renderPreguntas.renderPreguntas()
     }
   })
+
 })

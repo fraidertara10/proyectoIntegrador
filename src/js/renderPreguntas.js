@@ -1,5 +1,6 @@
 import { cantMaximaPreguntas, btnSiguiente } from './constants.js'
 const seccionPreguntas = document.getElementById('seccion-preguntas')
+let contador = 0;
 
 export class RenderPreguntasyRespuestas {
   preguntasSeleccionadas = []
@@ -20,11 +21,11 @@ export class RenderPreguntasyRespuestas {
       if(this.p<20){
       setTimeout(function () {
         window.location.href = 'http://localhost:4321/';
-    }, 2000);
+    }, 3000);
     }else{
       setTimeout(function () {
         window.location.href = 'http://localhost:4321/';
-        }, 2000);
+        }, 3000);
     }
     
     }
@@ -38,7 +39,7 @@ export class RenderPreguntasyRespuestas {
       let bgRespuestas = 'bg-red-400'
 
       if (respuesta.correcta) {
-        bgRespuestas = 'bg-green-400'
+        bgRespuestas = 'bg-green-400';
       }
       if (this.preguntasSeleccionadas[this.indicePreguntaActual] === indice) {
         bgRespuestas = 'bg-blue-400'
@@ -111,4 +112,5 @@ export class RenderPreguntasyRespuestas {
       })
     })
   }
+  
 }
